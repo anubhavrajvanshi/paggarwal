@@ -1,85 +1,63 @@
-/* Global Reset */
+/* Global */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  color: #5a2d0c;
 }
 
 body {
-  background: #faf7f2;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Smooth fade-in animation */
-.fade-in {
-  animation: fadeIn 1.2s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
 }
 
 /* Header */
 .header {
-  text-align: center;
-  padding: 01px 01px;
-/*  background: linear-gradient(135deg, #ffecd2, #fcb69f);  */
+  padding: 20px 0;
   border-bottom: 2px solid #e6a15d;
 }
 
-.header .logo {
-  width: 770px;
-  margin-bottom: 01px;
-}
-
-.header h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: #5a2d0c;
-}
-
-.header p {
-  font-size: 1.2rem;
-  color: #7a4a1a;
+.logo {
+  max-width: 90%;
 }
 
 /* Hero Section */
 .hero {
   text-align: center;
   padding: 30px 20px;
-  background: url("assets/bg-pattern.png"), linear-gradient(135deg, #fff7e6, #ffe4c4);
+  background: url(assets/bg-pattern.png), linear-gradient(135deg, #fff7e6, #ffe4c4);
   background-size: cover;
   color: #5a2d0c;
+  border-bottom: 1px solid #e6a15d;
 }
 
 .hero h2 {
-  font-size: 2.2rem;
-  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 
 .hero p {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
+  margin: 15px 0;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .btn {
   display: inline-block;
-  padding: 14px 28px;
-  background: #d97706;
-  color: #fff;
-  border-radius: 30px;
-  font-size: 1.1rem;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #00ff1fda;
+  color: #000;
   font-weight: 600;
+  border-radius: 30px;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .btn:hover {
-  background: #b86504;
-  transform: translateY(-3px);
+  background: #00ff1fda;
 }
 
 /* Services */
@@ -90,10 +68,10 @@ body {
 }
 
 .services h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #5a2d0c;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
 }
+
 
 .services ul {
   list-style: none;
@@ -107,15 +85,10 @@ body {
   margin: 10px 0;
   padding: 14px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   font-size: 1.1rem;
   transition: 0.3s;
   border-bottom: 1px solid #e6a15d;
-}
-
-.services li:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 5px 14px rgba(0,0,0,0.12);
 }
 
 /* Why Choose */
@@ -128,34 +101,26 @@ body {
 }
 
 .why h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #5a2d0c;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
 }
 
 .why p {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
-/* Contact Section */
+/* Contact Form */
 .contact {
-  padding: 60px 20px;
-  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e6a15d;
 }
 
 .contact h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #5a2d0c;
+  font-size: 1.6rem;
 }
 
-.contact p {
-  color: #7a4a1a;
-}
-
-/* Form */
-.contact form {
+form {
   max-width: 420px;
   margin: 25px auto;
   display: flex;
@@ -164,12 +129,12 @@ body {
   padding: 25px;
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.contact input,
-.contact textarea,
-.contact select {
+input,
+select,
+textarea {
   padding: 14px;
   border-radius: 10px;
   border: 1px solid #d4b48c;
@@ -177,32 +142,28 @@ body {
   background: #fffaf3;
 }
 
-.contact textarea {
-  resize: none;
-  height: 100px;
+textarea {
+  min-height: 120px;
 }
 
-.contact button {
-  background: #d97706;
-  color: #fff;
+button {
+  padding: 12px;
+  background: #00ff1fda;
+  color: #000;
+  font-weight: 700;
   border: none;
-  padding: 14px;
   border-radius: 30px;
-  font-size: 17px;
-  font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.contact button:hover {
-  background: #b86504;
-  transform: translateY(-3px);
+button:hover {
+  background: #ffdb4d;
 }
 
 .cta {
-  margin-top: 20px;
-  font-size: 1.1rem;
-  color: #7a4a1a;
+  margin-top: 15px;
+  font-size: 1rem;
 }
 
 /* Footer */
@@ -213,5 +174,36 @@ footer {
   color: #5a2d0c;
   margin-top: 40px;
   font-size: 0.95rem;
-  border-top: 1spx solid #e6a15d;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+  .hero h2,
+  .services h2,
+  .why h2,
+  .contact h2 {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 0.95rem;
+  }
 }
